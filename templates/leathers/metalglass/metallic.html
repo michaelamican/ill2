@@ -1,0 +1,33 @@
+{% extends 'template.html'%}
+{% block content %}
+<!--Center Left-->
+<div class='center_left'>
+	<div id = 'textbox'>
+			<p id='first_para'><h3 id='starter'>100% Recycled Glass Leather and Vinyl</h3></p>
+			<div id='spacer'></div>
+			<h4>Top images: 100% recycled glass finish leather.</h4>
+			<h4>Bottom image: 100% recycled glass finish vinyl.</h4>
+		</div>
+</div>
+
+<!--Center Right-->
+<div class='center_right'>
+	<div id="solo" class="modal-row">
+		<img class='solo modal-image'  onclick="openModal(); currentSlide(1);" src='../../../static/img/metalglass3.jpg' alt="Recycled Glass Leathers are smooth to the touch and distribute heat">
+		<div class='next_link'>
+			<p><a href='mg3'>< Stylized Metallic Leathers</a><a href='mg1'>100% Recycled Stylized Metallic Leather ></a></p>
+		</div>
+	</div>
+</div>
+
+<div id="the_modal" class="modal" onclick = "closeModal()">
+	<span class="close cursor" >&times;</span>
+	<div class="mySlides">
+		<div class="numbers"></div>
+		<img src='../../../static/img/metalglass3.jpg' alt="Recycled Glass Leathers are smooth to the touch and distribute heat">
+	</div>
+	<div class="caption-container">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

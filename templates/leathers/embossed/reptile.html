@@ -1,0 +1,30 @@
+{% extends 'template.html'%}
+{% block content %}
+<!--Center Left-->
+<div class='center_left'>
+	<div id="textbox">
+		<p id='first_para'><h3 id='starter'>Reptilian Patterns</h3></p>
+		<p>Beautiful and realistic reptillian embossings in any color, hand-wiped to fine detail. </p>
+	</div>
+</div>
+<!--Center Right-->
+<div class='center_right'>
+	<div id="solo" class="modal-row">
+		<img style="object-fit: scale-down; width: 80%; margin: 0 auto;" class='solo modal-image' src='../../../static/img/emboss12.png' alt="Reptile-inspired embossings" onclick="openModal(); currentSlide(1);">
+		<div class='next_link'>
+			<p><a href='animal'>< Animal Embossings</a><a href='abstracts'>Custom Hand-Dyed Abstracts ></a></p>
+		</div>
+	</div>
+</div>
+
+<div id="the_modal" class="modal" onclick = "closeModal()">
+	<span class="close cursor" >&times;</span>
+	<div class="mySlides">
+		<div class="numbers"></div>
+		<img style="height: 90%;" src='../../../static/img/emboss12.png' alt="Reptile-inspired embossings">
+	</div>
+	<div class="caption-container">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,118 @@
+{% extends 'template.html' %}
+{% block content %}
+<div class='center_left'>
+    <div id = 'textbox'>
+        <p id='first_para'><h3 id='starter'>I </h3> lluminare Studios has enjoyed a measure of success and acclaim as a purveyor of hand-colored custom leathers for use in fashion, interior design, and home goods.</p>
+    </div>
+</div>
+<div class='center_right'>
+    <div id="carousels" class="modal-row">
+        <div id="carouselFade" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active modal-column">
+                    <img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(1);" src="../static/img/magazine/HW-Interiors-p26-leather-bar-and-stools.png" alt="Custom leather dining room" style="height: 80%; width: 100% !important; margin: 0 auto; object-fit: scale-down;">
+                    <p>Custom leather dining room for private client</p>
+                </div>
+                <div class="carousel-item modal-column">
+                    <img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(2);" src="../../static/img/magazine/HW-Interiors-p262-leather-banquette.png" alt="Custom leather banquette" style="height: 80%; width: 100% !important; margin: 0 auto; object-fit: scale-down;">
+                    <p>Custom leather banquette for private client</p>
+                </div>
+
+                <div class="carousel-item modal-column">
+                    <img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(3);" src="../../static/img/magazine/HW-Interiors-p263-leather-coffee-table.png" alt="Custom leather and brass floors" style="height: 80%; width: 100% !important; margin: 0 auto; object-fit: scale-down;">
+                    <p>Custom leather coffee table for private client</p>
+                </div>
+                    
+                <div class="carousel-item modal-column">
+                    <img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(4);" src="../../static/img/magazine/HW-Interiors-p266-leather-wall-grid.png" alt="Custom leather walls" style="height: 80%; width: 100% !important; margin: 0 auto; object-fit: scale-down;">
+                    <p>Custom leather walls for private client</p>
+                </div>
+
+                <div class="carousel-item modal-column">
+                    <img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(5);" src="../../static/img/magazine/HW-Interiors-p269-leather-floor-brass-grid.png" alt="Custom leather floor and brass grid" style="height: 80%; width: 100% !important; margin: 0 auto; object-fit: scale-down;">
+                    <p>Custom leather and brass floors for private client</p>
+                </div>
+
+                <div class="carousel-item modal-column">
+                    <img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(6);" src="../../static/img/magazine/HW-Interiors-p271-leather-chaise.png" alt="Custom leather chaise" style="height: 80%; width: 100% !important; margin: 0 auto; object-fit: scale-down;">
+                    <p>Custom leather chaise</p>
+                </div>
+
+                <div class="carousel-item modal-column">
+                    <img style="width: 60% !important; object-fit: scale-down; margin: 0 auto;" class="d-block w-100 modal-image" onclick="openModal(); currentSlide(7)" src="/../static/img/interior_2.png" alt="Hollywood Interiors: collaboration with Melinda Ritz">
+                    <p>Hollywood Interiors: collaboration with Melinda Ritz</p>
+                </div>
+
+                <div class="carousel-item modal-column">
+                    <img style="width: 40% !important; height: auto; object-fit: scale-down; margin: 0 auto;" class="d-block w-100 modal-image" onclick="openModal(); currentSlide(8);" src='../static/img/interior_3.png' alt="Hollywood Interiors: collaboration with Melinda Ritz">
+                    <p>Hollywood Interiors: collaboration with Melinda Ritz</p>
+                </div>
+
+                <div class="carousel-item modal-column">
+                    <img style="width: 40% !important; height: auto; object-fit: scale-down; margin: 0 auto;" class="d-block w-100 modal-image" onclick="openModal(); currentSlide(9)" src="/../static/img/interior_5.png" alt="Hollywood Interiors: collaboration with Melinda Ritz">
+                    <p>Hollywood Interiors: collaboration with Melinda Ritz</p>
+                </div>
+
+            </div>
+            <a class="carousel-control-prev" href="#carouselFade" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselFade" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <p></p>
+        <div class="next_link">
+            <p><a class="two_link" href="/press/autoweek">< AutoWeek</a><a class="two_link" href="/press/archdigest"> Architectural Digest ></a></p>
+        </div>
+    </div>
+</div>
+
+<div id="the_modal" class="modal">
+    <span class="close cursor" onclick = "closeModal()">&times;</span>
+    <div class="mySlides click_through" onclick="plusSlides(1)">
+        <div class="numbers">1 / 9</div>
+        <img style="height: 90%;" src="../static/img/magazine/HW-Interiors-p26-leather-bar-and-stools.png" alt="Custom leather dining room">
+    </div>
+    <div class="mySlides click_through" onclick="plusSlides(1)">
+        <div class="numbers">2 / 9</div>
+        <img style="height: 90%;" src="../../static/img/magazine/HW-Interiors-p262-leather-banquette.png" alt="Custom leather banquette">
+    </div>
+    <div class="mySlides click_through" onclick="plusSlides(1)">
+        <div class="numbers">3 / 9</div>
+        <img style="height: 90%;" src="../../static/img/magazine/HW-Interiors-p263-leather-coffee-table.png" alt="Custom leather and brass floors">
+    </div>
+    <div class="mySlides click_through" onclick="plusSlides(1)">
+        <div class="numbers">4 / 9</div>
+        <img style="height: 90%;"src="../../static/img/magazine/HW-Interiors-p266-leather-wall-grid.png" alt="Custom leather walls">
+    </div>
+    <div class="mySlides click_through" onclick="plusSlides(1)">
+        <div class="numbers">5 / 9</div>
+        <img style="height: 90%;"src="../../static/img/magazine/HW-Interiors-p269-leather-floor-brass-grid.png" alt="Custom leather floor and brass grid">
+    </div>
+    <div class="mySlides click_through" onclick="plusSlides(1)">
+        <div class="numbers">6 / 9</div>
+        <img style="height: 90%;" src="../../static/img/magazine/HW-Interiors-p271-leather-chaise.png" alt="Custom leather chaise">
+    </div>
+    <div class="mySlides click_through" onclick="plusSlides(1)">
+        <div class="numbers">7 / 9</div>
+        <img style="height: 90%;" src="/../static/img/interior_2.png" alt="Hollywood Interiors: collaboration with Melinda Ritz">
+    </div>
+    <div class="mySlides click_through" onclick="plusSlides(1)">
+        <div class="numbers">8 / 9</div>
+        <img style="height: 90%;" src='../static/img/interior_3.png' alt="Hollywood Interiors: collaboration with Melinda Ritz">
+    </div>
+    <div class="mySlides click_through" onclick="plusSlides(1)">
+        <div class="numbers">9 / 9</div>
+        <img style="height: 90%;" src="/../static/img/interior_5.png" alt="Hollywood Interiors: collaboration with Melinda Ritz">
+    </div>
+    
+    <a class="modal-prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="modal-next" onclick="plusSlides(1)">&#10095;</a>
+    <div class="caption-container" onclick = "closeModal()">
+        <p id="caption"></p>
+    </div>
+</div>
+{% endblock %}

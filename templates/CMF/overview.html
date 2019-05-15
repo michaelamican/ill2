@@ -1,0 +1,80 @@
+{% extends 'template.html'%}
+{% block content %}
+<!--Center Left-->
+<div class='center_left'>
+	<div id = 'textbox'>
+		<p id='first_para'><h3 id='starter'>W </h3> e own a 50 year history of Color, Material, and Finishing (CMF) work, having been schooled extensively in color theory and creative application.</p>
+		<p>Our lead artist, Judy Amic-Angelo, pioneered CMF design. We have applied her innate and learned experiences to automobiles, interiors, paints, electronics, fabrics, leathers, art materials, and more.</p>
+		<p>We are excited to see CMF rising in its importance to design, and we are here as seasoned professionals ready to help.</p>
+	</div>
+</div>
+<!--Center Right-->
+<div class='center_right'>
+	<div id="carousels" class="modal-row">
+		<div id="carouselFade" class="carousel slide carousel-fade" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active modal-column">
+					<img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(1)" src="/../static/img/custom_product/swatchboard2.jpg" alt="Color story for a private client" style="width: 80% !important; margin: 0 auto; object-fit: scale-down;">
+				</div>
+				<div class="carousel-item modal-column">
+					<img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(2)" src="/../static/img/custom_product/borgstena1.png" alt="Color forecast of leather and fabric for Borgestena" style="width: 80% !important; margin: 0 auto; object-fit: scale-down;">
+				</div>
+				<div class="carousel-item modal-column">
+					<img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(3)" src="/../static/img/custom_product/borgstena2.png" alt="Color forecast of leather and fabric for Borgestena" style="width: 80% !important; margin: 0 auto; object-fit: scale-down;">
+				</div>
+				<div class="carousel-item modal-column">
+					<img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(3)" src="/../static/img/borgstena3.png" alt="Entire color forecast for Borgstena for Volvo" style="height: 100%; object-fit: scale-down;">
+				</div>
+				<div class="carousel-item modal-column">
+					<img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(5)" src="/../static/img/custom_product/swatchboard4.png" alt="Studio display" style="width: 80% !important; margin: 0 auto; object-fit: scale-down;">
+				</div>
+				<div class="carousel-item modal-column">
+					<img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(6)" src="/../static/img/berol.png" alt="Box design for Berol - our CMF work extends beyond leather!" style="width: 80% !important; margin: 0 auto; object-fit: scale-down;">
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselFade" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselFade" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+</div>
+
+
+<div id="the_modal" class="modal">
+	<span class="close cursor" onclick = "closeModal()">&times;</span>
+	<div class="mySlides click_through" onclick="plusSlides(1)">
+		<div class="numbers">1 / 6</div>
+		<img style="height: 90%;" src="/../static/img/custom_product/swatchboard2.jpg" alt="Color story for a private client">
+	</div>
+	<div class="mySlides click_through" onclick="plusSlides(1)">
+		<div class="numbers">2 / 6</div>
+		<img style="height: 90%; object-fit: scale-down;" src="/../static/img/custom_product/borgstena1.png" alt="Color forecast for Borgestena">
+	</div>
+	<div class="mySlides click_through" onclick="plusSlides(1)">
+		<div class="numbers">3 / 6</div>
+		<img style="height: 90%; object-fit: scale-down;" src="/../static/img/custom_product/borgstena2.png" alt="Color forecast for Borgestena">
+	</div>
+	<div class="mySlides click_through" onclick="plusSlides(1)">
+		<div class="numbers">4 / 6</div>
+		<img style="margin: 0 auto; width: auto; height: 90%; background-color: rgba(0,0,0,0.6); object-fit: scale-down;" src="/../static/img/borgstena3.png" alt="Entire forecast for Borgestena for Volvo">
+	</div>
+	<div class="mySlides click_through" onclick="plusSlides(1)">
+		<div class="numbers">5 / 6</div>
+		<img style="height: 90%;" src="/../static/img/custom_product/swatchboard4.png" alt="Swatchboard display for private gallery">
+	</div>
+	<div class="mySlides click_through" onclick="plusSlides(1)">
+		<div class="numbers">6 / 6</div>
+		<img src="/../static/img/berol.png" alt="Box design for Berol - our CMF work extends beyond leather!" style="height: 90%;">
+	</div>
+	<a class="modal-prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="modal-next" onclick="plusSlides(1)">&#10095;</a>
+	<div class="caption-container" onclick = "closeModal()">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

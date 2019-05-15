@@ -1,0 +1,30 @@
+{% extends 'template.html'%}
+{% block content %}
+<!--Center Left-->
+<div class='center_left'>
+	<p id='first_para'><h3 id='starter'>Impressions Damask with Gold Wipe</h3></p>
+	<p>This is from our Impressions collection, a beautiful damask large scale pattern that is in the stock line. In four colors with a light gold handwipe. Naturally, custom colors and handwipes are available.</p>
+	<div id='spacer'></div>
+	<h4>(Clockwise from top left): Damask on cowhide in cinnamon; Damask on cowhide in forest; Damask on cowhide in deep stream; Damask on cowhide in champagne</h4>
+</div>
+<!--Center Right-->
+<div class='center_right'>
+	<div id="solo" class="modal-row">
+		<img class='solo modal-image' src='../../../static/img/emboss6.jpg' alt="Damask pattern with gold wipe" onclick="openModal(); currentSlide(1);">
+		<div class='next_link'>
+			<p><a href='large'>< Large-Scale Patterns</a><a href='gaufrauge'>Gaufrauge Embroidered Leather></a></p>
+		</div>
+	</div>
+</div>
+
+<div id="the_modal" class="modal" onclick = "closeModal()">
+	<span class="close cursor" >&times;</span>
+	<div class="mySlides">
+		<div class="numbers"></div>
+		<img src='../../../static/img/emboss6.jpg' alt="Damask pattern with gold wipe">
+	</div>
+	<div class="caption-container">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

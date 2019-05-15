@@ -1,0 +1,31 @@
+{% extends 'template.html'%}
+{% block content %}
+<!--Center Left-->
+	<div class='center_left'>
+		<div id="textbox">
+			<p id='first_para'><h3 id='starter'>Custom Patterns and Embossings</h3></p>
+			<p>Let your imagination run wild. We can make your idea come to life with ease. The leather of your choice in hide type and size is first drum dyed in your custom color. Then the roller or plate embossing of your choice is applied. It doesn't have to stop there. We can then apply handwipe or wash to the surface in the color, technique and intensity you desire.</p>
+			<div id='spacer'></div>
+			<!-- <h4>(Clockwise from left): Moire 305 on cowhide, black base with gold handwipe; Snakeskin on calf in neutral with heavy lavender handwipe; Western tool on cabretta in putty with black handwipe.</h4> -->
+		</div>
+	</div>
+	<!--Center Right-->
+	<div class='center_right'>
+		<div id="solo" class="modal-row">
+			<img style="width: 80; object-fit: scale-down; margin: 0 aut0;" class='solo modal-image' src='../../../static/img/emboss11.png' alt="Custom Patterns and Embossing" onclick="openModal(); currentSlide(1);">
+			<div class='next_link'>
+				<p><a href='digital'>< Digitally Printed Leather</a><a href='animal'>Animal Embossings ></a></p>
+			</div>
+		</div>
+	</div>
+<div id="the_modal" class="modal" onclick = "closeModal()">
+	<span class="close cursor" >&times;</span>
+	<div class="mySlides">
+		<div class="numbers"></div>
+		<img style="height: 90%;" src='../../../static/img/emboss11.png' alt="Custom Patterns and Embossing">
+	</div>
+	<div class="caption-container">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

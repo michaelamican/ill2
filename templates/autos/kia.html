@@ -1,0 +1,64 @@
+{% extends 'template.html'%}
+{% block content %}
+<div class='center_left'>
+        <div id='textbox'>
+                <h3 id='starter'>Kia Concept Car</h3>
+                <div id='spacer'></div>
+                <p id='first_para'>Illuminare consulted with designers and provided seat and trim materials for this
+                        vehicle.</p>
+        </div>
+</div>
+<div class='center_right'>
+        <div id="tables">
+                <table>
+                        <tr class="modal-row">
+                                <td>
+                                        <img src='../static/img/kia1.jpg' alt="Kia Concept steering" class="modal-column" onclick="openModal(); currentSlide(1)">
+                                </td>
+                                <td>
+                                        <img src='../static/img/kia2.jpg' alt="Kia Concept exterior" class="modal-column" onclick="openModal(); currentSlide(2)">
+                                </td>
+                        </tr>
+                        <tr class="modal-row">
+                                <td>
+                                        <img src='../static/img/kia3.jpg' alt="Kia Concept seating" class="modal-column" onclick="openModal(); currentSlide(3)">
+                                </td>
+                                <td>
+                                        <img src='../static/img/kia4.jpg' alt="Kia Concept console" class="modal-column" onclick="openModal(); currentSlide(4)">
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <div class="next_link">
+                        <p><a href='/autos/porsche'>< Porsche Speedster</a><a href='/autos/custom'>Custom Headliner ></a></p>
+                </div>
+        </div>
+</div>
+
+<div id="the_modal" class="modal">
+        <span class="close cursor" onclick = "closeModal()">&times;</span>
+        <div class="mySlides">
+                <div class="numbers">1 / 4</div>
+                <img src='../static/img/kia1.jpg' onclick="plusSlides(1)" alt="Kia Concept steering">
+        </div>
+        <div class="mySlides">
+                <div class="numbers">2 / 4</div>
+                <img src='../static/img/kia2.jpg' onclick="plusSlides(1)" alt="Kia Concept exterior">
+        </div>
+        <div class="mySlides">
+                <div class="numbers">3 / 4</div>
+                <img src='../static/img/kia3.jpg' onclick="plusSlides(1)" alt="Kia Concept seating">
+                >
+        </div>
+        <div class="mySlides">
+                <div class="numbers">4 / 4</div>
+                <img src='../static/img/kia4.jpg' onclick="plusSlides(1)" alt="Kia Concept console">
+        </div>
+        
+        <a class="modal-prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="modal-next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="caption-container">
+                <p id="caption"></p>
+        </div>
+</div>
+{% endblock %}

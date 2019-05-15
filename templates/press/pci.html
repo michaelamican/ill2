@@ -1,0 +1,28 @@
+{% extends 'template.html' %}
+{% block content %}
+<div class='center_left'>
+	<div id = 'textbox'>
+		<p id='first_para'><h3 id='starter'>I </h3> lluminare Studios has enjoyed a measure of success and acclaim as a purveyor of hand-colored custom leathers for use in fashion, interior design, and home goods.</p>
+	</div>
+</div>
+<div class='center_right'>
+	<div  id="magazines" class="modal-row">
+		<p id="mag_title">PCI</p>
+		<img class="mag_scroll modal-image" onclick="openModal(); currentSlide(1);" src="../../static/img/pci_art.jpg" alt="PCI blurb about Illuminare">
+		<div class='mag_link'>
+			<p><a href="/press/angeleno">< Angeleno</a><a href="/press/robb">Robb Report ></a></p>
+		</div>
+	</div>
+</div>
+
+<div id="the_modal" class="modal" onclick = "closeModal()">
+	<span class="close cursor" >&times;</span>
+	<div class="mySlides">
+		<div class="numbers"></div>
+		<img src="../../static/img/pci_art.jpg" alt="PCI blurb about Illuminare">
+	</div>
+	<div class="caption-container">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

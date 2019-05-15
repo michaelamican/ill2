@@ -1,0 +1,34 @@
+{% extends 'template.html'%}
+{% block content %}
+<!--Center Left-->
+<div class='center_left'>
+	<div id="textbox">
+		<p id='first_para'><h3 id='starter'>Small Scale Patterns and Weaves</h3></p>
+		<p>We have dozens of pinstripes, small checks, corduroy, etc. and many plates that look like natural wovens. Plates are usually 30" x 50". We can emboss on the leather of your choice in any type, weight and color. A light handwipe can be added in tone-on-tone or slightly contrasting to give the pattern added texture and dimension.</p>
+		<div id='spacer'></div>
+		<h4>Custom colors available, two hide minimum.Contact us for samples.</h4>
+		<h4>(Clockwise from top left): Cubes in coral split suede; Chinese weave in Daintree; Raffia in brown; Large weave in cognac; Small weave in red with recycled glass matrix; Corduroy in chocolate.</h4>
+	</div>
+</div>
+
+<!--Center Right-->
+<div class='center_right'>
+	<div id="solo" class="modal-row">
+		<img class='solo modal-image' src='../../../static/img/emboss3.jpg' alt="Small-scale patterns" onclick="openModal(); currentSlide(1);">
+		<div class='next_link'>
+			<p><a href='abstracts'>< Custom Hand-Dyed Abstracts</a><a href='woven'>Natural Woven Embossings ></a></p>
+		</div>
+	</div>
+</div>
+
+<div id="the_modal" class="modal" onclick = "closeModal()">
+	<span class="close cursor" >&times;</span>
+	<div class="mySlides">
+		<div class="numbers"></div>
+		<img src='../../../static/img/emboss3.jpg' alt="Small-scale patterns">
+	</div>
+	<div class="caption-container">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

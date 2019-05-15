@@ -1,0 +1,76 @@
+{% extends 'template.html'%}
+{% block content %}
+<div class='center_left'>
+	<div id = 'textbox'>
+		<p id='first_para'><h3 id='starter'>T </h3> he Illuminare Studio happily admits to more than 35 years experience in the fields of interior architecture and product design, CMF, and advanced concept design.</p>
+		<p>A strong desire to thrive as an independent firm has led us to become knowledgeable in all aspects of these design disciplines. We are familiar with production processes, from automobiles to textiles, we have branched out and created a custom upholstry leather line that is produced in our mill in Upstate New York.</p>
+		<p>Production design, set design and art direction have been added to our repertoire for film and video.</p>
+		<p>Our CMF consulting inspires us to keep learning about raw, sustainable, and state-of-the-art engineered finishes. We consult on the best design, color/material and market direction for your products, and we thrive on a creative challenge.</p>
+		<p>Our approach is hands-on and we become personally involved in each project regardless of its size or scope. Illuminare has served a long list of diverse clients and provided unique solutions for their varied needs.</p>
+		<p>A creative challenge spurs our imagination. With our team of experts in place we then do our magic and transform your dreams into reality.</p>
+	</div>
+</div>
+<div class='center_right'>
+	<div id="carousels" class="modal-row">
+		<div id="carouselFade" class="carousel slide carousel-fade" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item modal-column active">
+					<img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(1)" src="static/img/chair_1.png" alt="Custom chair" style="width:80%;">
+				</div>
+				<div class="carousel-item modal-column">
+					<img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(2)" src="static/img/illuminare_leather_0.jpeg" alt="Leathers">
+				</div>
+				<div class="carousel-item modal-column">
+					<img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(3)" src="static/img/illuminare_leather_1.jpeg" alt="Leathers">
+				</div>
+				<div class="carousel-item modal-column">
+					<img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(4)" src="static/img/illuminare_leather_2.jpeg" alt="Leathers">
+				</div>
+				<div class="carousel-item modal-column">
+					<img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(5)" src="static/img/illuminare_leather_3.jpg" alt="Illuminare">
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselFade" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselFade" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div id="the_modal" class="modal">
+	<span class="close cursor" onclick = "closeModal()">&times;</span>
+	<div class="mySlides click_through" onclick="plusSlides(1)">
+		<div class="numbers">1 / 5</div>
+		<img style="height: 75%;" src="static/img/chair_1.png" alt="Custom chair">
+	</div>
+	<div class="mySlides click_through" onclick="plusSlides(1)">
+		<div class="numbers">2 / 5</div>
+		<img src="static/img/illuminare_leather_0.jpeg" alt="Leathers">
+	</div>
+	<div class="mySlides click_through" onclick="plusSlides(1)">
+		<div class="numbers">3 / 5</div>
+		<img src="static/img/illuminare_leather_1.jpeg" alt="Leathers">
+		>
+	</div>
+	<div class="mySlides click_through" onclick="plusSlides(1)">
+		<div class="numbers">4 / 5</div>
+		<img src="static/img/illuminare_leather_2.jpeg" alt="Leathers">
+	</div>
+	<div class="mySlides click_through" onclick="plusSlides(1)">
+		<div class="numbers">5 / 5</div>
+		<img src="static/img/illuminare_leather_3.jpg" alt="Illuminare">
+	</div>
+	
+	<a class="modal-prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="modal-next" onclick="plusSlides(1)">&#10095;</a>
+	<div class="caption-container" onclick = "closeModal()">
+		<p id="caption"></p>
+	</div>
+</div>
+	
+{% endblock %}

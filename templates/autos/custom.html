@@ -1,0 +1,30 @@
+{% extends 'template.html'%}
+{% block content %}
+<div class='center_left'>
+	<div id = 'textbox' >
+		<h3 id='starter'>Digitally Printed Headliner</h3>
+		<div id='spacer'></div>
+		<p>Custom digital aftermarket headliner for Cadillac GTS. Illuminare is able to place any digital image on your car's headliner. This one is on ultra-suede.</p>
+		<p>Contact us for help accomplishing all your aftermarket auto interior needs!</p>
+	</div>
+</div>
+<div class='center_right'>
+	<div id="solo" class="modal-row">
+		<img class="solo modal-image" src='../static/img/darkside.jpg' alt="Custom digital image of Beethoven on car interior roof panel" onclick="openModal(); currentSlide(1)">
+		<div class="next_link">
+			<p><a href='/autos/kia'>< Kia Concept Car</a><a href='/autos/hyundai'>Hyundai Concept Car ></a></p>
+		</div>
+	</div>
+</div>
+
+<div id="the_modal" class="modal">
+	<span class="close cursor" onclick = "closeModal()">&times;</span>
+	<div class="mySlides" onclick = "closeModal()">
+		<div class="numbers"></div>
+		<img src='../static/img/darkside.jpg' alt="Custom digital image of Beethoven on car interior roof panel">
+	</div>
+	<div onclick = "closeModal()" class="caption-container">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

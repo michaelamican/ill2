@@ -1,0 +1,63 @@
+{% extends 'template.html'%}
+{% block content %}
+<div class='center_left'>
+        <div id = 'textbox'>
+                <h3 id='starter'>BMW M5</h3>
+                <div id='spacer'></div>
+                <p id='first_para'>Illuminare designed and executed the full interior concept and provided all the materials for the interior upgrade of this spectacular BMW M5.</p>
+        </div>
+</div>
+<div class='center_right'>
+        <div id="tables">
+                <table>
+                        <tr class="modal-row">
+                                <td>
+                                        <img src='../static/img/bmw1.jpg' alt="BMW M5 steering" class="modal-column" onclick="openModal(); currentSlide(1)">
+                                </td>
+                                <td>
+                                        <img src='../static/img/bmw2.jpg' alt="BMW M5 exterior" class="modal-column" onclick="openModal(); currentSlide(2)">
+                                </td>
+                        </tr>
+                        <tr class="modal-row">
+                                <td>
+                                        <img src='../static/img/bmw4.jpg' alt="BMW M5 door panel" class="modal-column" onclick="openModal(); currentSlide(3)">
+                                </td>
+                                <td>
+                                        <img src='../static/img/bmw3.jpg' alt="BMW M5 Seating" class="modal-column" onclick="openModal(); currentSlide(4)">
+                                </td>
+                        </tr>
+                </table>
+                <p></p>
+                <div class="next_link">
+                        <p><a href='/autos/hyundai'> < Hyundai Concept Car</a><a href='/autos/acura'>Honda Acura Concept Car > </a></p>
+                </div>
+        </div>
+</div>
+
+<div id="the_modal" class="modal">
+        <span class="close cursor" onclick = "closeModal()">&times;</span>
+        <div class="mySlides">
+                <div class="numbers">1 / 4</div>
+                <img src="../static/img/bmw1.jpg" onclick="plusSlides(1)" alt="BMW M5 steering">
+        </div>
+        <div class="mySlides">
+                <div class="numbers">2 / 4</div>
+                <img src="../static/img/bmw2.jpg" onclick="plusSlides(1)" alt="BMW M5 exterior">
+        </div>
+        <div class="mySlides">
+                <div class="numbers">3 / 4</div>
+                <img src="../static/img/bmw4.jpg" onclick="plusSlides(1)" alt="BMW M5 door panel">
+                >
+        </div>
+        <div class="mySlides">
+                <div class="numbers">4 / 4</div>
+                <img src="../static/img/bmw3.jpg" onclick="plusSlides(1)" alt="BMW M5 Seating">
+        </div>
+        
+        <a class="modal-prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="modal-next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="caption-container">
+                <p id="caption"></p>
+        </div>
+</div>
+{% endblock %}

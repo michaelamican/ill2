@@ -1,0 +1,33 @@
+{% extends 'template.html'%}
+{% block content %}
+<!--Center Left-->
+<div class='center_left'>
+	<div id="textbox">
+		<p id='first_para'><h3 id='starter'>Animal Print Floor Tile</h3></p>
+		<p>8–10 oz vegetable tanned floor tiles in various animal prints and colors.</p>
+		<div id='spacer'></div>
+		<h4>Contact us for more information</h4>
+	</div>
+</div>
+
+<!--Center Right-->
+<div class='center_right'>
+	<div id="solo" class="modal-row">
+		<img class='solo modal-image' onclick="openModal(); currentSlide(1);" src='../../../static/img/tile2.jpg' alt="Durable animal-print leather floor tiles">
+		<div class='next_link'>
+			<p><a href='floorem'>< Embossed & Plain Floor Tile</a><a href='wall'>Wall Tile ></a></p>
+		</div>
+	</div>
+</div>
+
+<div id="the_modal" class="modal" onclick = "closeModal()">
+	<span class="close cursor" >&times;</span>
+	<div class="mySlides">
+		<div class="numbers"></div>
+		<img src='../../../static/img/tile2.jpg' alt="Durable animal-print leather floor tiles">
+	</div>
+	<div class="caption-container">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

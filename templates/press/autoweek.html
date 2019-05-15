@@ -1,0 +1,29 @@
+{% extends 'template.html' %}
+{% block content %}
+<div class='center_left'>
+	<div id = 'textbox'>
+		<p id='first_para'><h3 id='starter'>I </h3> lluminare Studios has enjoyed a measure of success and acclaim as a purveyor of hand-colored custom leathers for use in fashion, interior design, and home goods.</p>
+	</div>
+</div>
+
+<div class='center_right'>
+	<div  id="magazines" class="modal-row">
+		<p id="mag_title">Autoweek</p>
+		<img class="mag_scroll modal-image" onclick="openModal(); currentSlide(1);" src="../../static/img/autoweek_art.jpg" alt="Autoweek: Porsche Carrera GT with Illuminare leather interiors" style="width: 60%; margin: 1% auto;">
+		<div class='mag_link'>
+			<p><a href="/press/western">< Western Interiors</a><a href="/press/hollywood">Hollywood Interiors ></a></p>
+		</div>
+	</div>
+</div>
+
+<div id="the_modal" class="modal" onclick = "closeModal()">
+	<span class="close cursor" >&times;</span>
+	<div class="mySlides">
+		<div class="numbers"></div>
+		<img src="../../static/img/autoweek_art.jpg" alt="Autoweek: Porsche Carrera GT with Illuminare leather interiors" style="height: 90%;">
+	</div>
+	<div class="caption-container">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

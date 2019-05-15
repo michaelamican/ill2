@@ -1,0 +1,33 @@
+{% extends 'template.html'%}
+{% block content %}
+<!--Center Left-->
+<div class='center_left'>
+	<div id = 'textbox'>
+		<p id='first_para'><h3 id='starter'>Toscana</h3></p>
+		<p>Imported cowhide, drum-dyed. No surface pigments or finish applied to cover up the natural beauty of the leather. Markings are inherent and should not be considered flaws. Hide size 55-65 sq.ft.</p>
+		<div id='spacer'></div>
+		<h4>Custom colors available. Contact us for samples.</h4>
+		<h4>(Clockwise from top left): Chili, black, chocolate, negra, summer tan, red-brown</h4>
+	</div>
+</div>
+<!--Center Right-->
+<div class='center_right'>
+	<div id="solo" class="modal-row">
+		<img class='solo modal-image' onclick="openModal(); currentSlide(1);" src='../../../static/img/plain2.jpg' alt="Imported cowhide with natural markings and patina">
+		<div class='next_link'>
+			<p><a href='finished'>< Luxe Finished Leather</a><a href='grain'>Pebbled, Shrunken, and Smooth ></a></p>
+		</div>
+	</div>
+</div>
+
+<div id="the_modal" class="modal" onclick = "closeModal()">
+	<span class="close cursor" >&times;</span>
+	<div class="mySlides">
+		<div class="numbers"></div>
+		<img src='../../../static/img/plain2.jpg' alt="Imported cowhide with natural markings and patina">
+	</div>
+	<div class="caption-container">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

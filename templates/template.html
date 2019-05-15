@@ -1,0 +1,190 @@
+
+<html>
+<head>
+	<title>Illuminare</title>
+	{% load static %}
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+	<link href='https://fonts.googleapis.com/css?family=Italiana' rel='stylesheet'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel = 'stylesheet' href = '../static/css/style.css'>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
+	<!-- 
+		Website design by Michael Amic-Angelo
+		Visit www.amicandesign.com, or email at amican.design@gmail.com
+	-->
+	<script>
+		$(document).ready(()=>{
+			$('.carousel').hover('pause', ()=>{
+				console.log("Paused");
+			});
+			
+			$('.carousel').on('slide.bs.carousel',()=>{
+				console.log("Slide");
+				$('.carousel').carousel('.next').hide();
+				$('.carousel').carousel('.prev').fadeOut();
+				
+			});
+			$('.carousel').on('slid.bs.carousel', ()=>{
+				console.log("Slid");
+				$('.carousel').carousel('.next').fadeIn();
+				$('.carousel').carousel('.prev').hide();
+			})
+		});
+	</script>
+	<script>
+		function openModal(){
+			document.getElementById("the_modal").style.display = "block";
+		}
+		function closeModal(){
+			document.getElementById("the_modal").style.display = "none";
+		}
+
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+			 showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n){
+			showSlides(slideIndex = n);
+		}
+
+		function showSlides(n){
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("modal-image");
+			var captionText = document.getElementById("caption");
+			if(n > slides.length) {slideIndex = 1}
+			if(n < 1) {slideIndex = slides.length}
+			for (i = 0; i < slides.length; i++){
+				slides[i].style.display = "none";
+			}
+			for(i = 0; i < dots.length; i++){
+				dots[i].className = dots[i].className.replace(" modal-active", "");
+			}
+			slides[slideIndex-1].style.display="flex";
+			slides[slideIndex-1].style.justifyContent="center";
+			dots[slideIndex-1].className += " modal-active";
+			captionText.innerHTML = dots[slideIndex-1].alt;
+		}
+	</script>
+	<link href='https://fonts.google.com/specimen/Lato?selection.family=Lato' rel='stylesheet'>
+</head>
+<body>
+	<!-- Created by Amican Design, github.com/michaelamican -->
+	<div id='wrapper'>
+<!-- Header -->
+		<div id='header'>
+			<h1 id='logo'>Illuminare</h1>
+<!-- Navbar -->
+			<nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+				<button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#my-navbar'>
+					<span class='navbar-toggler-icon'></span>
+				</button>
+			<div class="collapse navbar-collapse" id='my-navbar'>
+    		<ul class="navbar-nav">
+				<li class="nav-item active"><a class='nav-link' href='/'>Home</a></li>
+<!-- Nav Item 2: CMF -->
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="products" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Color Work</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class='dropdown-item' href='/CMF'>Overview</a>
+						<a class="dropdown-item" href="/CMF/stories">Color, Trend & Material Work</a>
+					</div>
+				</li>
+<!-- Nav Item 2: Leathers -->
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="leather" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Leather</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class='dropdown-item' href='/leather'>
+							Overview
+						</a>
+						<a class="dropdown-item" href="/plain">Traditional Leather and Suede</a>
+						<a class="dropdown-item" href="/emboss">Embossed Leather</a>
+						<a class="dropdown-item" href="/metalglass">Metallic and Glassy Leather</a>
+						<a class="dropdown-item" href="/tile">Leather Wall and Floor Tiles</a>
+					</div>
+				</li>
+<!-- Nav Item 3: Autos -->
+				<li class="nav-item active dropdown">
+					<a class="nav-link dropdown-toggle" href="auto" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Automotive</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class='dropdown-item' href='/auto'>Overview</a>
+						<a class="dropdown-item" href="/autos/acura">Acura Concept Car</a>
+						<a class="dropdown-item" href="/autos/kia">Kia Concept Car</a>
+						<a class="dropdown-item" href="/autos/hyundai">Hyundai Concept Car</a>
+						<a class="dropdown-item" href="/autos/bmw">BMW M5</a>
+						<a class="dropdown-item" href="/autos/porsche">Porsche Speedster</a>
+						<a class="dropdown-item" href="/autos/custom">Custom Headliner</a>
+					</div>
+				</li>
+<!-- Nav Item 4: Products -->
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="products" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class='dropdown-item' href='/products'>Overview</a>
+					</div>
+				</li>
+<!-- Nav Item 5: Interiors -->
+				<li class="nav-item">
+					<a class="nav-link" href="/interiors">Interiors</a>
+				</li>
+<!-- Nav Item 6: Press -->
+				<li class="nav-item">
+					<a class="nav-link" href="/press">Press</a>
+				</li>
+<!-- Nav Item 7: Showrooms -->
+				<li class='nav-item'>
+					<a class='nav-link' href='/showrooms'>Showrooms</a>
+				</li>
+<!-- Nav Item 8: Inspiration -->
+				<!-- <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="inspiration" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Inspiration</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class='dropdown-item' href='/inspiration'>Sources</a>
+						<a class="dropdown-item" href="/colors">Forecasting</a>
+					</div>
+				</li> -->
+<!-- Nav Item 9: Social Media -->
+				<li class='nav-item'>
+					<a class='nav-link' href='/media'>Instagram</a>
+				</li>
+<!-- Nav Item 10: Shop -->
+				
+				<li class='nav-item'>
+					<a class='nav-link' href='/shop'>Shop</a>
+				</li>
+
+<!-- Nav Item 11: Contact Us -->
+				<li class='nav-item'>
+						<a class='nav-link' href='/mailing'>Contact Us</a>
+					</li>
+			</ul>
+		</div>
+	</div>
+<!--Main content -->
+		<div id='main'>
+			<div id='center_content'>
+				{% block content%}
+				
+				{% endblock %}
+			</div>
+		</div>
+<!-- Footer -->			
+		<div id='footer'>
+			<div id='contact_info'>
+				<ul class='footer'>
+					<li><a href="https://www.google.com/maps/place/Beverly+Hills,+CA/" target="_blank"><i class="fa fa-map-marker" style="font-size: 1.25em;" aria-hidden="true"></i><p>Los Angeles, CA</p></a></li>
+					<li><a href="tel:3233826694"><i class="fa fa-phone" style="font-size: 1.25em" aria-hidden="true"></i><p>(323) 382-6694</p></a></li>
+					<li><a href='mailto:illuminare@sbcglobal.net'><i class="fa fa-envelope-o" style="font-size: 1.25em" aria-hidden="true"></i><p>illuminare@sbcglobal.net</p></a></li>
+<!-- SOCIAL MEDIA LINKS TO BE EDITED -->
+					<li><a href="https://www.instagram.com/illuminarestudio" target="_blank"><i class="fa fa-instagram" style="font-size: 1.25em" aria-hidden="true"></i><p>@illuminarestudio</p></a></li>
+					<li><a href="https://www.facebook.com/friendofangels/" target="_blank"><i class="fa fa-facebook" style="font-size: 1.25em" aria-hidden="true"></i><p>/friendofangels</p></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{% extends 'template.html'%}
+{% block content %}
+<!--Center Left-->
+<div class='center_left'>
+	<div id = 'textbox'>
+		<p id='first_para'><h3 id='starter'>Luxe Finished Leather</h3></p>
+		<p>Finished leather with a natural look and feel. Supple with a protective finish.</p>
+		<div id='spacer'></div>
+		<h4>Available in 17 colors. Custom colors available. Contact us for samples.</h4>
+	</div>
+</div>
+<!--Center Right-->
+<div class='center_right'>
+	<div id="solo" class="modal-row">
+		<img class='solo modal-image' onclick="openModal(); currentSlide(1);" src='../../../static/img/plain1.jpg' alt="Finished leather with a natural look and feel.">
+		<div class='next_link'>
+			<p><a href='premiere'>< Premiere</a><a href='toscana'>Toscana ></a></p>
+		</div>
+	</div>
+</div>
+
+<div id="the_modal" class="modal" onclick = "closeModal()">
+	<span class="close cursor" >&times;</span>
+	<div class="mySlides">
+		<div class="numbers"></div>
+		<img src='../../../static/img/plain1.jpg' alt="Finished leather with a natural look and feel">
+	</div>
+	<div class="caption-container">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

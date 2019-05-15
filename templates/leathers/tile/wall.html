@@ -1,0 +1,33 @@
+{% extends 'template.html'%}
+{% block content %}
+<!--Center Left-->
+<div class='center_left'>
+	<div id="textbox">
+		<p id='first_para'><h3 id='starter'>Wall Tile</h3></p>
+		<p>Wall tiles are typically 5 oz vegetable tanned leather. We have many colors in stock and can do your custom colors. Many standard sizes are available. Contact us for more information.</p>
+		<div id='spacer'></div>
+		<h4>(Clockwise from top left): Glossy finish: Black; Red; Plum; Sunflower</h4>
+	</div>
+</div>
+	
+<!--Center Right-->
+<div class='center_right'>
+	<div id = 'solo' class="modal-row">
+		<img class='solo modal-image' onclick="openModal(); currentSlide(1);" src='../../../static/img/tile3.jpg' alt="Vegetable-tanned durable leather wall tiles">
+		<div class='next_link'>
+			<p><a href='flooran'>< Animal Print Floor Tile</a><a href='floorem'>Embossed & Plain Floor Tile ></a></p>
+		</div>
+	</div>
+</div>
+
+<div id="the_modal" class="modal" onclick = "closeModal()">
+	<span class="close cursor" >&times;</span>
+	<div class="mySlides">
+		<div class="numbers"></div>
+		<img src='../../../static/img/tile3.jpg' alt="Vegetable-tanned durable leather wall tiles">
+	</div>
+	<div class="caption-container">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,125 @@
+{% extends 'template.html'%}
+{% block content %}
+<div class='center_left'>
+	<div id = 'textbox'>
+		<p id='first_para'><h3 id='starter'>O </h3> ur projects have ranged from the complete space planning and architectural build of a 200,000 sq ft corporate facility, to a restaurant lounge, to a small residence of less than 2,000 sq ft.</p>
+		<p>We handle retail and exhibition design in total or as part of a team. We pride ourselves on completing projects on time and within budget. We often create furniture and lighting for our own projects.</p>
+		<p>As creators and end–users of our own products, we have better control of customizing the unique look for a space.</p>
+	</div>
+</div>
+
+<div class='center_right'>
+	<div id="carousels" class="modal-row">
+		<div id="carouselFade" class="carousel slide carousel-fade" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active modal-column">
+					<img  style="width: 70% !important; object-fit: scale-down; margin: 0 auto;" class="d-block w-100 modal-image" onclick="openModal(); currentSlide(1);" src='../static/img/epson2.jpg' alt="Epsom America Headquarters, Torrence, CA">
+					<p>Epson Headquarters, Torrence, CA</p>
+				</div>
+				<div class="carousel-item modal-column">
+					<img  style="width: 40%; object-fit: scale-down; margin: 0 auto;" class="d-block w-100 modal-image" onclick="openModal(); currentSlide(2)" src="/../static/img/interior_1.png" alt="Office and dining area for a luxury caravan">
+					<p>Luxury Caravan Interior</p>
+				</div>
+				<div class="carousel-item modal-column">
+					<img  style="width: 60%; object-fit: scale-down; margin: 0 auto;" class="d-block w-100 modal-image" onclick="openModal(); currentSlide(3)" src="/../static/img/interior_2.png" alt="Hollywood Interiors: collaboration with Melinda Ritz">
+					<p>Hollywood Interiors: collaboration with Melinda Ritz</p>
+				</div>
+				<div class="carousel-item modal-column">
+					<img  style="width: 40%; object-fit: scale-down; margin: 0 auto;" class="d-block w-100 modal-image" onclick="openModal(); currentSlide(4);" src='../static/img/interior_3.png' alt="Hollywood Interiors: collaboration with Melinda Ritz">
+					<p>Hollywood Interiors: collaboration with Melinda Ritz</p>
+				</div>
+				<div class="carousel-item modal-column">
+					<img  style="width: 40%; object-fit: scale-down; margin: 0 auto;" class="d-block w-100 modal-image" onclick="openModal(); currentSlide(5)" src="/../static/img/interior_5.png" alt="Hollywood Interiors: collaboration with Melinda Ritz">
+					<p>Hollywood Interiors: collaboration with Melinda Ritz</p>
+				</div>
+				<div class="carousel-item modal-column">
+					<img  style="width: 46%; object-fit: scale-down; margin: 0 auto;" class="d-block w-100 modal-image" onclick="openModal(); currentSlide(6);" src='../static/img/magazine/HW-Interiors-p262-leather-banquette.png' alt="Hollywood Interiors: leather detailing in bar and kitchen">
+					<p>Hollywood Interiors: leather detailing in bar and kitchen</p>
+				</div>
+				<div class="carousel-item modal-column">
+					<img  style="width: 45%; object-fit: scale-down; margin: 0 auto;" class="d-block w-100 modal-image" onclick="openModal(); currentSlide(7)" src="/../static/img/magazine/HW-Interiors-p269-leather-floor-brass-grid.png" alt="Hollywood Interiors: leather and brass floor tiles for walk-in closet">
+					<p>Hollywood Interiors: leather and brass floor</p>
+				</div>
+				<div class="carousel-item modal-column">
+					<img  style="width: 46%; object-fit: scale-down; margin: 0 auto;" class="d-block w-100 modal-image" onclick="openModal(); currentSlide(8)" src="/../static/img/magazine/HW-Interiors-p26-leather-bar-and-stools.png" alt="Hollywood Interiors: leather dining room details">
+					<p>Hollywood Interiors: leather dining room details</p>
+				</div>
+				<div class="carousel-item modal-column">
+					<img  style="width: 40%; object-fit: scale-down; margin: 0 auto;" class="d-block w-100 modal-image" onclick="openModal(); currentSlide(9);" src='../static/img/elton_john_66.png' alt="Architectural Digest Dec '09: Elton John's living room">
+					<p>Architectural Digest Dec '09: Living room</p>
+				</div>
+				<div class="carousel-item modal-column">
+					<img  style="width: 80%; object-fit: scale-down; margin: 0 auto;" class="d-block w-100 modal-image" onclick="openModal(); currentSlide(10)" src="/../static/img/elton_john_67a.png" alt="Architectural Digest Dec '09: Elton John's kitchen">
+					<p>Architectural Digest Dec '09: Kitchen</p>
+				</div>
+				<div class="carousel-item modal-column">
+					<img  style="width: 40%; object-fit: scale-down; margin: 0 auto;" class="d-block w-100 modal-image" onclick="openModal(); currentSlide(11)" src="/../static/img/elton_john_67b.png" alt="Architectural Digest Dec '09: Elton John's office">
+					<p>Architectural Digest Dec '09: Office</p>
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselFade" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselFade" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+</div>
+
+
+<div id="the_modal" class="modal">
+	<span class="close cursor" onclick = "closeModal()">&times;</span>
+	<div class="mySlides click_through" onclick="plusSlides(1)">
+		<div class="numbers">1 / 11</div>
+		<img src='../static/img/epson2.jpg' alt="Epsom America Headquarters, Torrence, CA">
+	</div>
+	<div class="mySlides click_through" onclick="plusSlides(1)">
+		<div class="numbers">2 / 11</div>
+		<img  style="height: 90%;" src="/../static/img/interior_1.png" alt="Office and dining area for a luxury caravan">
+	</div>
+	<div class="mySlides click_through" onclick="plusSlides(1)">
+		<div class="numbers">3 / 11</div>
+		<img  style="height: 90%;" src="/../static/img/interior_2.png" alt="Hollywood Interiors: collaboration with Melinda Ritz">
+	</div>
+	<div class="mySlides click_through" onclick="plusSlides(1)">
+		<div class="numbers">4 / 11</div>
+		<img  style="height: 90%;" src='../static/img/interior_3.png' alt="Hollywood Interiors: collaboration with Melinda Ritz">
+	</div>
+	<div class="mySlides click_through" onclick="plusSlides(1)">
+		<div class="numbers">5 / 11</div>
+		<img  style="height: 90%;" src="/../static/img/interior_5.png" alt="Hollywood Interiors: collaboration with Melinda Ritz">
+	</div>
+	<div class="mySlides click_through" onclick="plusSlides(1)">
+		<div class="numbers">6 / 11</div>
+		<img  style="height: 90%;" src='../static/img/magazine/HW-Interiors-p262-leather-banquette.png' alt="Hollywood Interiors: leather detailing in bar and kitchen">
+	</div>
+	<div class="mySlides click_through" onclick="plusSlides(1)">
+		<div class="numbers">7 / 11</div>
+		<img  style="height: 90%;" src="/../static/img/magazine/HW-Interiors-p269-leather-floor-brass-grid.png" alt="Hollywood Interiors: leather and brass floor tiles for walk-in closet">
+	</div>
+	<div class="mySlides click_through" onclick="plusSlides(1)">
+		<div class="numbers">8 / 11</div>
+		<img  style="height: 90%;" src="/../static/img/magazine/HW-Interiors-p26-leather-bar-and-stools.png" alt="Hollywood Interiors: leather dining room details">
+	</div>
+	<div class="mySlides click_through" onclick="plusSlides(1)">
+		<div class="numbers">9 / 11</div>
+		<img  style="height: 90%;" src='../static/img/elton_john_66.png' alt="Architectural Digest Dec '09: Elton John's living room">
+	</div>
+	<div class="mySlides click_through" onclick="plusSlides(1)">
+		<div class="numbers">10 / 11</div>
+		<img  style="height: 90%;" src="/../static/img/elton_john_67a.png" alt="Architectural Digest Dec '09: Elton John's kitchen">
+	</div>
+	<div class="mySlides click_through" onclick="plusSlides(1)">
+		<div class="numbers">11 / 11</div>
+		<img  style="height: 90%;" src="/../static/img/elton_john_67b.png" alt="Architectural Digest Dec '09: Elton John's office">
+	</div>
+	<a class="modal-prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="modal-next" onclick="plusSlides(1)">&#10095;</a>
+	<div class="caption-container" onclick = "closeModal()">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

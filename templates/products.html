@@ -1,0 +1,76 @@
+{% extends 'template.html'%}
+{% block content %}
+<!--Center Left-->
+<div class='center_left'>
+	<div id = 'textbox'>
+		<p id='first_para'><h3 id='starter'>W</h3> e are well-versed in many production processes from small electronics to automobiles, with special expertise in textile design. We design numerous private label textile lines.</p>
+		<p>In addition to full design concepts, we can consult on color, material, and market trend direction for your existing products. See our own line of <a href='/metalglass'>100% recycled glass and mirror finished leathers</a> addition textiles which are like no other in existence.</p>
+		<p>We have a broad-based knowledge of green design materials.</p>
+		<img src='../../static/img/chairs.png' alt="chairs">
+		<p>Custom leather for seating</p>
+	</div>
+</div>
+<!--Center Right-->
+<div class='center_right'>
+	<div id="carousels" class="modal-row">
+		<div id="carouselFade" class="carousel slide carousel-fade" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active modal-column">
+					<img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(1)" src="/static/img/alligatorchair.jpg" alt="Custom Alligator chair" style="height: 90%; width: 80% !important; margin: 0 auto; object-fit: scale-down;">
+				</div>
+				<div class="carousel-item modal-column">
+					<img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(2)" src="/static/img/Magazine/HW-Interiors-p263-leather-coffee-table.png" alt="HW Interiors Leather Table" style="width: 80% !important; margin: 0 auto; object-fit: scale-down;">
+				</div>
+				<div class="carousel-item modal-column">
+					<img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(3)" src="/static/img/Magazine/HW-Interiors-p271-leather-chaise.png" alt="HW Interiors Chaise" style="width: 80% !important; margin: 0 auto; object-fit: scale-down;">
+				</div>
+				<div class="carousel-item modal-column">
+					<img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(4)" src="/static/img/ottoman.jpg" alt="Ottoman" style="width: 80% !important; margin: 0 auto; object-fit: scale-down;">
+				</div>
+				<div class="carousel-item modal-column">
+					<img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(5)" src="/static/img/product_1.png" alt="Custom antiqued leather chair" style="width: 80% !important; margin: 0 auto; object-fit: scale-down;">
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselFade" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselFade" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div id="the_modal" class="modal">
+	<span class="close cursor" onclick = "closeModal()">&times;</span>
+	<div class="mySlides">
+		<div class="numbers">1 / 5</div>
+		<img src="/static/img/alligatorchair.jpg" onclick="plusSlides(1)" alt="Custom Alligator Chair">
+	</div>
+	<div class="mySlides">
+		<div class="numbers">2 / 5</div>
+		<img style="height: 75%;" onclick="plusSlides(1)" src="/static/img/Magazine/HW-Interiors-p263-leather-coffee-table.png" alt="HW Interiors Leather Table" >
+	</div>
+	<div class="mySlides">
+		<div class="numbers">3 / 5</div>
+		<img style="height: 75%;" onclick="plusSlides(1)" src="/static/img/Magazine/HW-Interiors-p271-leather-chaise.png" alt="HW Interiors Chaise" style="width: 80% !important; margin: 0 auto; object-fit: scale-down;">
+		>
+	</div>
+	<div class="mySlides">
+		<div class="numbers">4 / 5</div>
+		<img src="/static/img/ottoman.jpg" onclick="plusSlides(1)" alt="Ottoman">
+	</div>
+	<div class="mySlides">
+		<div class="numbers">5 / 5</div>
+		<img src="/static/img/product_1.png" onclick="plusSlides(1)" alt="Custom antiqued leather chair">
+	</div>
+	
+	<a class="modal-prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="modal-next" onclick="plusSlides(1)">&#10095;</a>
+	<div class="caption-container" onclick = "closeModal()">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

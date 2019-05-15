@@ -1,0 +1,33 @@
+{% extends 'template.html'%}
+{% block content %}
+<!--Center Left-->
+<div class='center_left'>
+	<div id="textbox">
+		<p id='first_para'><h3 id='starter'>Embossed & Plain Floor Tile</h3></p>
+		<p>8–10 oz natural finished vegetable tanned floor tiles embossed in various patterns: Cobra, Large Croc, Shagreen, Natural, Woven, Floral 50 and Diamond. 12 x 12" tile shown; other sizes, custom colors and finishes available.</p>
+		<div id='spacer'></div>
+		<h4>Contact us for samples. Custom colors available, two hide minimum.</h4>
+	</div>
+</div>
+
+<!--Center Right-->		
+<div class='center_right'>
+	<div id="solo" class="modal-row">
+		<img class='solo modal-image' onclick="openModal(); currentSlide(1);" src='../../../static/img/tile1.jpg' alt="Durable embossed vegetable-tanned floor tiles">
+		<div class='next_link'>
+			<p><a href='wall'>< Wall Tile</a><a href='flooran'>Animal Print Floor Tile ></a></p>
+		</div>
+	</div>
+</div>
+
+<div id="the_modal" class="modal" onclick = "closeModal()">
+	<span class="close cursor" >&times;</span>
+	<div class="mySlides">
+		<div class="numbers"></div>
+		<img src='../../../static/img/tile1.jpg' alt="Durable animal-print leather floor tiles">
+	</div>
+	<div class="caption-container">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'template.html'%}
+{% block content %}
+<!--Center Left-->
+<div class='center_left'>
+	<div id="textbox">
+		<p id='first_para'><h3 id='starter'>Animal Embossings</h3></p>
+		<p>We have an extensive number of plates to choose from. Buffalo, snakeskins, lizards, crocodile, stingray, and more...our handwipe treatments can make them look very subtle and elegant or very wild and eccentric.</p>
+		<div id='spacer'></div>
+		<h4>(Left to right): Baly Hornback chocolate lambskin with black wipe; Super Gator pale mint with handwipe; Asian Buffalo in redwood; Shagreen in putty with tone on tone handwipe.</h4>
+	</div>
+</div>
+<!--Center Right-->
+<div class='center_right'>
+	<div id="solo" class="modal-row">
+		<img class='solo modal-image' src='../../../static/img/emboss2.jpg' alt="Custom animal embossings" onclick="openModal(); currentSlide(1)">
+		<div class='next_link'>
+			<p><a href='custom'>< Custom-Designed Leather</a><a href='reptile'>Floral Snakeskin ></a></p>
+		</div>
+	</div>
+</div>
+
+<div id="the_modal" class="modal" onclick = "closeModal()">
+	<span class="close cursor">&times;</span>
+	<div class="mySlides">
+		<div class="numbers"></div>
+		<img src='../../../static/img/emboss2.jpg' alt="Custom animal embossings">
+	</div>
+	<div class="caption-container">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

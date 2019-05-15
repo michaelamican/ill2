@@ -1,0 +1,33 @@
+{% extends 'template.html'%}
+{% block content %}
+<!--Center Left-->
+<div class='center_left'>
+	<div id = 'textbox'>
+		<p id='first_para'><h3 id='starter'>Suede</h3></p>
+		<p>Shown are split suedes: calfskin with the top layer removed to reveal its soft beauty and rich color. We also have the finest nubuck suede which is cowhide that is buffed to a velvet-like softness. It is naked and markings are inherent to the skin.</p>
+		<div id='spacer'></div>
+		<h4>Contact us for samples. Custom colors available, two hide minimum.</h4>
+		<h4>Colors shown (left to right): Hazelnut, Sparrow, Ivory, Ash, Persimmon, Dusk, Light Grey, Pistachio</h4>
+	</div>
+</div>
+<!--Center Right-->
+<div class='center_right'>
+	<div id="solo" class="modal-row">
+		<img class='solo modal-image' onclick="openModal(); currentSlide(1);" src='../../../static/img/plain5.jpg' alt="Calfskin split suede and nubuck with natural markings">
+		<div class='next_link'>
+			<p><a href='grain'>< Pebbled, Shrunken, and Smooth</a><a href='duke'>Duke ></a></p>
+		</div>
+	</div>
+</div>
+
+<div id="the_modal" class="modal" onclick = "closeModal()">
+	<span class="close cursor" >&times;</span>
+	<div class="mySlides">
+		<div class="numbers"></div>
+		<img src='../../../static/img/plain5.jpg' alt="Calfskin split suede and nubuck with natural markings">
+	</div>
+	<div class="caption-container">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

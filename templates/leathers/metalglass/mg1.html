@@ -1,0 +1,31 @@
+{% extends 'template.html'%}
+{% block content %}
+<!--Center Left-->
+<div class='center_left'>
+	<div id = 'textbox'>
+			<p id='first_para'><h3 id='starter'>100% Recycled Glass Stylized Leather</h3></p>
+			<p>Exotic animal & reptile embossings, florals & small-scale patterns enhanced with special metallic pigments. Recycled glass & mirror and pigments have been added to the finishes for new looks in cowhide.</p>
+			<div id='spacer'></div>
+			<h4>Clockwise from top left): Floral 50 wall tile in scarabeous green/purple with glass matrix; Python handwipe in bronze mist on finished metallic cowhide; Chinese weave in bone; Shagreen embossing with metallic tone on tone handwipe in putty; Firenza finished cowhide with matte blue shimmer glass matrix pigment; Chinese weave in light grey</h4>
+	</div>
+</div>
+<!--Center Right-->
+<div class='center_right'>
+	<div id="solo" class="modal-row">
+		<img class='solo modal-image'  onclick="openModal(); currentSlide(1);" src='../../../static/img/metalglass1.jpg' alt="Stylized leather with heat-distribution technology">
+		<div class='next_link'>
+			<p><a href='metallic'>< Metallic Leathers</a><a href='mg2'>100% Recycled Glass Leather ></a></p>
+		</div>
+	</div>
+</div>
+<div id="the_modal" class="modal" onclick = "closeModal()">
+	<span class="close cursor" >&times;</span>
+	<div class="mySlides">
+		<div class="numbers"></div>
+		<img src='../../../static/img/metalglass1.jpg' alt="Stylized leather with heat-distribution technology">
+	</div>
+	<div class="caption-container">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

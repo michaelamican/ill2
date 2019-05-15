@@ -1,0 +1,30 @@
+{% extends 'template.html'%}
+{% block content %}
+<!--Center Left-->
+<div class='center_left'>
+	<p id='first_para'><h3 id='starter'>Larger Scale Patterns</h3></p>
+	<p>Plate and roller embossings can be applied to the leather of your choice. We have everything from small scale geometrics to large scale damasks. This is where the designer can create their own masterpiece. It is a joy to do the custom color and handwipe treatment of your choice. We interpret your ideas and bring them to life for your project. Here we show larger scale patterns. Many more are available.</p>
+	<div id='spacer'></div>
+	<h4>(Left to right): Venezia, Rose Grenadine; Italian embossed hand-wiped cowhide, Le Cirque; Gaufrage embossed nubuck suede, Soleil; embossed lambskin in black with purple recycled glass handwipe pattern, Floral 50.</h4>
+</div>
+<!--Center Right-->
+<div class='center_right'>
+	<div id="solo" class="modal-row">
+		<img class='solo modal-image' src='../../../static/img/emboss1.jpg' alt="Custom large-scale pattern" onclick="openModal(); currentSlide(1);">
+		<div class='next_link'>
+			<p><a href='woven'>< Natural Woven Embossings</a><a href='impressions'>Impressions Damask with Gold Wipe ></a></p>
+		</div>
+	</div>
+</div>
+
+<div id="the_modal" class="modal" onclick = "closeModal()">
+	<span class="close cursor" >&times;</span>
+	<div class="mySlides">
+		<div class="numbers"></div>
+		<img src='../../../static/img/emboss1.jpg' alt="Custom large-scale pattern">
+	</div>
+	<div class="caption-container">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

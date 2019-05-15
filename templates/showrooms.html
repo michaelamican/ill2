@@ -1,0 +1,41 @@
+{% extends 'template.html'%}
+{% block content %}
+<!--Center Left-->
+<div class='center_left'>
+	<div id = 'textbox'>
+		<div>
+			<h3>Rocky Rochon Design</h3>
+			<p></p>
+			<p>306 N. Robertson Blvd</p>
+			<p>Los Angeles, CA, 90048</p>
+			<p><a href="https://rockyrochonpaint.com/" target="_blank" alt="Rocky Rochon Paint Lab">The Paint Lab</a></p>
+		</div>
+		<hr>
+		<div>
+			<h3>Elizabeth Baker</h3>
+			<p></p>
+			<p>Independent representation</p>
+			<p><a href="tel:3109276904">Tel. (310) 927-6904</a></p>
+			<p><a href="mailto:collectivedesign@earthlink.net">collectivedesign@earthlink.net</a></p>
+			<p><a href="collectivedesignlaca.com" target="_blank">collectivedesignlaca.com</a></p>
+		</div>
+	</div>
+</div>
+<!--Center Right-->
+<div class='center_right'>
+	<div id="solo" class="modal-row">
+		<img style="width: 97%; object-fit: scale-down;" class="solo modal-image" onclick="openModal(); currentSlide(1);" src="../../static/img/tarlow_melrose.png" alt="Rose Tarlow Melrose Showroom, one of our partners in leather">
+	</div>
+</div>
+
+<div id="the_modal" class="modal" onclick = "closeModal()">
+	<span class="close cursor" >&times;</span>
+	<div class="mySlides">
+		<div class="numbers"></div>
+		<img style="width: 60%; height: 90.8%; object-fit: scale-down;" src="../../static/img/tarlow_melrose.png" alt="Rose Tarlow showroom in Melrose; one of our partners">
+	</div>
+	<div class="caption-container">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

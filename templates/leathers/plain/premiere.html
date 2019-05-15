@@ -1,0 +1,34 @@
+{% extends 'template.html'%}
+{% block content %}
+<!--Center Left -->
+<div class='center_left'>
+    <div id = 'textbox'>
+        <p id='first_para'><h3 id='starter'>Premiere</h3></p>
+        <p>"Prima" series. Gorgeous vacuum-dried naked cowhide with a natural patina and slight protective seal. Natural markings and patina are inherent to its beauty.</p>
+        <p>Clockwise from top left: Pearl Sand, Yellow Cream, Charcoal, Green, Saddle, Dark Brown, British Tan, Gray, Palomino (center).</p>
+        <h4>50 sq ft</h4>
+        <h4>$14.95/sq ft. Contact us for samples. Custom colors available.</h4>
+    </div>
+</div>
+<!--Center Right-->
+<div class='center_right'>
+    <div id="solo" class="modal-row">
+        <img class='solo modal-image'  onclick="openModal(); currentSlide(1);" src='../../../static/img/prima.png' alt="Premiere Naked leather, Prima series">
+        <div class='next_link'>
+            <p><a href='naked'>< Naked</a><a href='finished'>Luxe Finished Leather ></a></p>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div id="the_modal" class="modal" onclick = "closeModal()">
+    <span class="close cursor" >&times;</span>
+    <div class="mySlides">
+        <div class="numbers"></div>
+        <img style="max-height: 80vh; width: auto;" src='../../../static/img/prima.png' alt="Premiere naked leather, Prima series">
+    </div>
+    <div class="caption-container">
+        <p id="caption"></p>
+    </div>
+</div>
+
+{% endblock %}

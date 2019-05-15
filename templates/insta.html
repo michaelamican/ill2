@@ -1,0 +1,20 @@
+{% extends 'template.html'%}
+    {% block content %}
+        <div id="insta">
+            <p class="center title"><a href="http://www.instagram.com/illuminarestudio" target="_blank">View Profile </a></p>
+            <div id="my_wall">
+            {% load instagram_client %}
+                {% instagram_recent_media_wall username="illuminarestudio" %}
+                {% for media in recent_media %}
+                    <div class="insta_item">
+                       <img class="insta_thumb" src="{{ media.thumbnail_src| thumbnail }}" style="margin: 10px">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <script>
+            $('.django_instagram_media_wall_item').click(()=>{
+                window.location.replace("https://www.instagram.com/illuminarestudio");
+            })
+        </script>
+    {%endblock%}

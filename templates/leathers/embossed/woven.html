@@ -1,0 +1,32 @@
+{% extends 'template.html'%}
+{% block content %}
+<!--Center Left-->
+<div class='center_left'>
+	<div id="textbox">
+			<p id='first_para'><h3 id='starter'>Natural Woven Embossings</h3></p>
+			<p>(Left to right): Napoli weave on split suede in ivory; Basketweave on calf in olive; Mini Pisa weave on nubuck suede in natural brown; Mini deep weave on cabretta in red-brown</p>
+			<div id='spacer'></div>
+			<h4>Complete sample line and custom colors available.</h4>
+	</div>
+</div>
+<!--Center Right-->
+<div class='center_right'>
+	<div id="solo" class="modal-row">
+		<img class='solo modal-image' src='../../../static/img/emboss4.jpg' alt="Tightly-Woven Embossed Patterns" onclick="openModal(); currentSlide(1);">
+		<div class='next_link'>
+			<p><a href='small'>< Small Scale Patterns and Weaves</a><a href='large'>Larger Scale Patterns></a></p>
+		</div>
+	</div>
+</div>
+
+<div id="the_modal" class="modal" onclick = "closeModal()">
+	<span class="close cursor" >&times;</span>
+	<div class="mySlides">
+		<div class="numbers"></div>
+		<img src='../../../static/img/emboss4.jpg'  alt="Tightly-Woven Embossed Patterns">
+	</div>
+	<div class="caption-container">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

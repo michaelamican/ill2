@@ -1,0 +1,44 @@
+{% extends 'template.html'%}
+{% block content %}
+<!--Center Left-->
+<div class='center_left'>
+	<div id = 'textbox'>
+		<p><h3 id='starter'>W </h3> e have been consultants for automotive colors and trim since 1982, providing everything from conceptual design to full-scale production mock-ups.</p>
+		<p>With extensive experience in the automotive industry, we offer design and materials for concept, production and aftermarket models.</p>
+		<p>We provide a high degree of flexibility and innovation to automotive projects of any size or scope.</p>
+		<p>Contact us for a complete list of automotive projects, or portfolio presentation.</p>
+		<img class="solo modal-image" onclick="openModal(); currentSlide(1);" src="/static/img/maybach.jpg" alt="Maybach interior">
+	</div>
+</div>
+<div class='center_right'>
+	<div id="tables">
+		<table>
+			<tbody>
+				<tr>
+					<td><a href='/autos/acura'><img class='car_table' src='../static/img/acura1.jpg'></a><p>Acura Concept Car</p></td>
+					<td><a href='/autos/bmw'><img class='car_table' src='../static/img/bmw1.jpg'></a><p>BMW M5</p></td>
+				</tr>
+				<tr>
+					<td><a href='/autos/hyundai'><img class='car_table' src='../static/img/hyundai1.jpg'></a><p>Hyundai Concept Car</p></td>
+					<td><a href='/autos/kia'><img class='car_table' src='../static/img/kia1.jpg'></a><p>Kia Concept Car</p></td>
+				</tr>
+				<tr>
+					<td><a href='/autos/porsche'><img class='car_table' src='../static/img/porsche1.jpg'></a><p>Porsche Speedster 356</p></td>
+					<td><a href='/autos/custom'><img class='car_table' src='../static/img/darkside.jpg' style="max-width: 202px;"></a><p>Digitally Printed Headliner</p></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div id="the_modal" class="modal" onclick = "closeModal()">
+	<span class="close cursor" >&times;</span>
+	<div class="mySlides">
+		<div class="numbers"></div>
+		<img src="/static/img/maybach.jpg" alt="Maybach interior">
+	</div>
+	<div class="caption-container">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

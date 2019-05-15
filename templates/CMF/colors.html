@@ -1,0 +1,95 @@
+{% extends 'template.html' %}
+{% block content %}
+<div class='center_left'>
+	<div id = 'textbox'>
+		<p id='first_para'><h3 id='starter'>O </h3> ur goal is to turn your dreams into a reality.</p>
+		<p>We have 30 years of trend and color forecasting for big name designers like Kia, Borgestena, Berol, Porsche, and others.</p>
+		<p>We will assemble color stories and forecasts for your product line with obsessive detail.</p>
+		
+	</div>
+</div>
+<div class='center_right'>
+	<div id="carousels" class="modal-row">
+		<div id="carouselFade" class="carousel slide carousel-fade" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active modal-column">
+						<img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(1)" src="../static/img/cmf_1.png" alt="Color forecast for car manufacturer"  style="width: 60% !important; margin: 0 auto; object-fit: scale-down;">
+				</div>
+				<div class="carousel-item modal-column">
+					<img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(2)" src="../static/img/cmf_2.png" alt="We draw inspiration from everything" style="width: 70% !important; margin: 0 auto; object-fit: scale-down;">
+				</div>
+				<div class="carousel-item modal-column">
+					<img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(3)" src="../static/img/cmf_3.png" alt="Interior design paint swatchboard with one of our partners, Rocky Rochon Paint Lab" style="width: 70% !important; margin: 0 auto; object-fit: scale-down;">
+				</div>
+				<div class="carousel-item modal-column">
+					<img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(4)" src="../static/img/cmf_4.png" alt="Inspirational material: 'Blue Ocean' by Barry Rosenthal (2013)" style="width: 80% !important; margin: 0 auto; object-fit: scale-down;">
+				</div>
+				<div class="carousel-item modal-column">
+					<img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(5)" src="../static/img/cmf_7.png" alt="Furniture design swatching for a private client" style="width: 80% !important; margin: 0 auto; object-fit: scale-down;">
+				</div>
+				<div class="carousel-item modal-column">
+					<img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(6)" src="../static/img/cmf_5.png" alt="Furniture design swatching for a private client" style="width: 80% !important; margin: 0 auto; object-fit: scale-down;">
+				</div>
+				<div class="carousel-item modal-column">
+					<img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(7)" src="../static/img/cmf_6.png" alt="Earth-inspired color story for a private client" style="width: 80% !important; margin: 0 auto; object-fit: scale-down;">
+				</div>
+				<div class="carousel-item modal-column">
+					<img class="d-block w-100 modal-image" onclick="openModal(); currentSlide(8)" src="../static/img/cmf_8.png" alt="Home interior design with leather and paint swatching for private client" style="width: 80% !important; margin: 0 auto; object-fit: scale-down;">
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselFade" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hdiden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselFade" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+</div>
+
+
+<div id="the_modal" class="modal">
+	<span class="close cursor" onclick = "closeModal()">&times;</span>
+	<div class="mySlides">
+		<div class="numbers">1 / 8</div>
+		<img onclick="plusSlides(1)" src="../static/img/cmf_1.png" alt="Color forecast for car manufacturer">
+	</div>
+	<div class="mySlides">
+		<div class="numbers">2 / 8</div>
+		<img onclick="plusSlides(1)" src="../static/img/cmf_2.png" alt="We draw inspiration from everything">
+	</div>
+	<div class="mySlides">
+		<div class="numbers">3 / 8</div>
+		<img onclick="plusSlides(1)" src="../static/img/cmf_3.png" alt="Interior design paint swatchboard with one of our partners, Rocky Rochon Paint Lab">
+		>
+	</div>
+	<div class="mySlides">
+		<div class="numbers">4 / 8</div>
+		<img onclick="plusSlides(1);" src="../static/img/cmf_4.png" alt="Inspirational material: 'Blue Ocean' by Barry Rosenthal (2013)">
+	</div>
+	<div class="mySlides">
+		<div class="numbers">5 / 8</div>
+		<img onclick="plusSlides(1);" src="../static/img/cmf_7.png" alt="Furniture design swatching for a private client">
+	</div>
+	<div class="mySlides">
+		<div class="numbers">6 / 8</div>
+		<img onclick="plusSlides(1);" src="../static/img/cmf_5.png" alt="Furniture design swatching for a private client">
+	</div>
+	<div class="mySlides">
+		<div class="numbers">7 / 8</div>
+		<img onclick="plusSlides(1);" src="../static/img/cmf_6.png" alt="Earth-inspired color story for a private client" style="height: 90%;">
+	</div>
+	<div class="mySlides">
+		<div class="numbers">8 / 8</div>
+		<img onclick="plusSlides(1);" src="../static/img/cmf_8.png" alt="Home interior design with leather and paint swatching for private client">
+	</div>
+	
+	<a class="modal-prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="modal-next" onclick="plusSlides(1)">&#10095;</a>
+	<div class="caption-container" onclick = "closeModal()">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

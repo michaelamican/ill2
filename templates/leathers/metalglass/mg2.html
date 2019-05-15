@@ -1,0 +1,33 @@
+{% extends 'template.html'%}
+{% block content %}
+<!--Center Left-->
+<div class='center_left'>
+	<div id = 'textbox'>
+			<p id='first_para'><h3 id='starter'>Metallics</h3></p>
+			<br>
+			<p>Finishes vary from very matte to very shiny, your custom finish is easy to achieve. Call for samples.</p>
+			<div id='spacer'></div>
+			<h4>(Clockwise from top left): Firenza on cowhide in Mother of Pearl; Firenza on cowhide in diamond shimmer; Firenza on cowhide in pewter; Firenza on cowhide in moss shimmer; Firenza on cowhide in burnished copper, matte finish using recycled glass matrix; Firenza on Cowhide in Sage Shimmer, matte finish using recycled glass matrix</h4>
+		</div>
+</div>	
+<!--Center Right-->
+<div class='center_right'>
+	<div id="solo" class="modal-row">
+		<img class='solo modal-image'  onclick="openModal(); currentSlide(1);" src='../../../static/img/metalglass5.jpg' alt="Metallic finish leather, from matte to ultra-shiny">
+		<div class='next_link'>
+			<p><a href='mg1'>< 100% Recycled Stylized Metallic Leather</a><a href='mg3'>Stylized Metallic Leather ></a></p>
+		</div>
+	</div>
+</div>
+
+<div id="the_modal" class="modal" onclick = "closeModal()">
+	<span class="close cursor" >&times;</span>
+	<div class="mySlides">
+		<div class="numbers"></div>
+		<img src='../../../static/img/metalglass5.jpg' alt="Metallic finish leather, from matte to ultra-shiny">
+	</div>
+	<div class="caption-container">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

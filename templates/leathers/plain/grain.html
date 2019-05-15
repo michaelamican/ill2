@@ -1,0 +1,32 @@
+{% extends 'template.html'%}
+{% block content %}
+<!--Center Left-->
+<div class='center_left'>
+	<div id = 'textbox'>
+		<p id='first_para'><h3 id='starter'>Pebbled, Shrunken & Smooth: Slightly Finished</h3></p>
+		<p>Here are examples of leathers in varied textures. There are cowhides both pebbled and smooth, calfskin which has a tight grain and soft hand, and buttery soft cabretta unlike any other leather for soft hand and rich natural appearance. These are only a few of the available leathers. Call for complete sampling. Look for our on-line catalog of samples soon to come. We can match your leathers in any color and most any type and finish. Just ask!</p>
+		<div id='spacer'></div>
+		<h4>(Top row, left to right): Napoli, Color: Stone; Classico, Color: Scarlet; Sicilia-B, Color: Spice; Napoli, Color: Baby Blue; Napoli, Color: Charcoal (Bottom row, left to right): Sicilia-B, Color: Chocolate; Napoli, Color: Seafoam; Sicilia-B, Color: Black; Classico, Color: Ivory; Napoli, Color: Oak</h4>
+	</div>
+</div>
+<!--Center Right-->
+<div class='center_right'>
+	<div id="solo" class="modal-row">
+		<img class='solo modal-image' onclick="openModal(); currentSlide(1);" src='../../../static/img/plain3.jpg' alt="Natural grained leathers">
+		<div class='next_link'>
+			<p><a href='toscana'>< Toscana Leather</a><a href='duke'>The Duke ></a></p>
+		</div>
+	</div>
+</div>
+
+<div id="the_modal" class="modal" onclick = "closeModal()">
+	<span class="close cursor" >&times;</span>
+	<div class="mySlides">
+		<div class="numbers"></div>
+		<img src='../../../static/img/plain3.jpg' alt="Natural grained leathers">
+	</div>
+	<div class="caption-container">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

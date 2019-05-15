@@ -1,0 +1,33 @@
+{% extends 'template.html'%}
+{% block content %}
+<!--Center Left-->
+<div class='center_left'>
+	<div id = 'textbox'>
+		<p id='first_para'><h3 id='starter'>The Duke</h3></p>
+		<p>Dye-enhanced cowhide. Soft finish in neutral colors with some protection. Slight antique finish. Hide gains a natural patina over time.</p>
+		<h4>50-55 sq ft for current color selection. Custom colors available, 100 sq ft minimum.</h4>
+		<h4>$14.95/sq ft. Contact us for samples. </h4>
+		<h4>Main panel: Dressage. Top to bottom: Sundown, Cowhand, Western, Chaps, Saddle, Dressage</h4>
+	</div>
+</div>
+<!--Center Right-->
+<div class='center_right'>
+	<div id="solo" class="modal-row">
+		<img class='solo modal-image'  onclick="openModal(); currentSlide(1);" src='../../../static/img/the_duke.png' alt="Antiqued leather that gains a natural patina over time">
+		<div class='next_link'>
+			<p><a href='suede'>< Suede</a><a href='agnello'>Agnello ></a></p>
+		</div>
+	</div>
+</div>
+
+<div id="the_modal" class="modal" onclick = "closeModal()">
+	<span class="close cursor" >&times;</span>
+	<div class="mySlides">
+		<div class="numbers"></div>
+		<img src='../../../static/img/the_duke.png' style="max-height: 80vh" alt="Antiqued leather that gains a natural patina over time">
+	</div>
+	<div class="caption-container">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

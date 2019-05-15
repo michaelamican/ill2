@@ -1,0 +1,32 @@
+{% extends 'template.html'%}
+{% block content %}
+<!--Center Left-->
+<div class='center_left'>
+	<div id="textbox">
+		<p id='first_para'><h3 id='starter'>Impressions and Abstracts</h3></p>
+		<p>Hand-painted and dyed abstract patterns</p>
+		<div id='spacer'></div>
+		<h4>Contact us for samples. Custom patterns available, two hide minimum.</h4>
+	</div>
+</div>
+<!--Center Right-->
+<div class='center_right'>
+	<div id="solo" class="modal-row">
+		<img style="object-fit: scale-down; border: none !important; width: 60% !important; height: auto; margin: -20px auto 10px;" class='solo modal-image' src='../../../static/img/dotted_leather.jpg' alt="Abstract Hand-Dyed Patterns" onclick="openModal(); currentSlide(1);">
+		<div class='next_link'>
+			<p><a href='reptile'>< Floral Snakeskin</a><a href='small'>Small Scale Patterns and Weaves ></a></p>
+		</div>
+	</div>
+</div>
+
+<div id="the_modal" class="modal" onclick = "closeModal()">
+	<span class="close cursor" >&times;</span>
+	<div class="mySlides" >
+		<div class="numbers"></div>
+		<img class="too_tall" src='../../../static/img/dotted_leather.jpg' alt="Abstract Hand-Dyed Patterns">
+	</div>
+	<div class="caption-container" >
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

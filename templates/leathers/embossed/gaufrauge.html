@@ -1,0 +1,28 @@
+{% extends 'template.html'%}
+{% block content %}
+<!--Center Left-->
+<div class='center_left'>
+	<p id='first_para'><h3 id='starter'>Gaufrauge Embroidered Leather</h3></p>
+	<p>Gaufrauge embossing with hand-stitched embroidery.</p>
+</div>
+<!--Center Right-->
+<div class='center_right'>
+	<div id="solo" class="modal-row">
+		<img class='solo modal-image' src='../../../static/img/emboss7.jpg' alt="Gaufrauge embossing with hand-stiched custom embroidery" onclick="openModal(); currentSlide(1);">
+		<div class='next_link'>
+			<p><a href='impressions'>< Impressions Damask with Gold Wipe</a><a href='digital'>Digitally Printed Leather ></a></p>
+		</div>
+	</div>
+</div>
+
+<div id="the_modal" class="modal" onclick = "closeModal()">
+	<span class="close cursor" >&times;</span>
+	<div class="mySlides">
+		<div class="numbers"></div>
+		<img src='../../../static/img/emboss7.jpg' alt="Gaufrauge embossing with hand-stiched custom embroidery">
+	</div>
+	<div class="caption-container">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}

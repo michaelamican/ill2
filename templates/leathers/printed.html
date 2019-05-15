@@ -1,0 +1,33 @@
+{% extends 'template.html'%}
+{% block content %}
+<!--Center Left-->
+<div class='center_left'>
+	<div id = 'textbox'>
+		<p id='first_para'><h3 id='starter'>Digitally Printed Leather</h3></p>
+		<p>Illuminare can print any design on fabric or leather.</p>
+		<p>Call for quote.</p>
+		<div id='spacer'></div>
+		<h4>(At right) Large Red Floral</h4>
+	</div>
+</div>
+<!--Center Right-->
+<div class='center_right'>
+	<div id="solo" class="modal-row">
+		<img class='solo modal-image' onclick="openModal(); currentSlide(1);" src='../../../static/img/emboss8.jpg' alt="Red leather with a white digital print">
+		<div class='next_link'>
+			<p><a href='/leather'>Return to Leather Main</a></p>
+		</div>
+	</div>
+</div>
+
+<div id="the_modal" class="modal" onclick = "closeModal()">
+	<span class="close cursor" >&times;</span>
+	<div class="mySlides">
+		<div class="numbers"></div>
+		<img src='../../../static/img/emboss8.jpg' alt="Red leather with a white digital print">
+	</div>
+	<div class="caption-container">
+		<p id="caption"></p>
+	</div>
+</div>
+{% endblock %}
